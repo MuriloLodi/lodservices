@@ -1,0 +1,275 @@
+/* --------- RESET BÁSICO --------- */
+
+
+    body {
+      background-color: #060707;
+      color: #fff;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Roboto, "Helvetica Neue", sans-serif;
+    }
+
+
+
+        :root {
+      --bg-light: #ffffff;
+      --bg-dark: #000000;
+      --text-dark: #0f172a;
+      --text-light: #ffffff;
+      --text-muted-light: #4b5563;
+      --text-muted-dark: #9ca3af;
+      --border-light: #e5e7eb;
+      --border-dark: #27272a;
+    }
+
+    /* Se quiser modo dark automático com prefers-color-scheme */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: var(--bg-dark);
+        color: var(--text-light);
+      }
+      .footer {
+        background-color: var(--bg-dark);
+        border-top: 1px solid var(--border-dark);
+      }
+      .footer-brand-title {
+        color: var(--text-light);
+      }
+      .footer-brand-desc {
+        color: var(--text-muted-dark);
+      }
+      .footer-link {
+        color: var(--text-muted-dark);
+      }
+      .footer-link:hover {
+        color: var(--text-light);
+      }
+      .footer-bottom {
+        border-top: 1px solid var(--border-dark);
+        color: var(--text-muted-dark);
+      }
+    }
+
+    footer.footer {
+      width: 100%;
+      background-color: var(--bg-light);
+      border-top: 1px solid var(--border-light);
+    }
+
+    .footer-inner {
+      max-width: 1280px; /* ~max-w-7xl */
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+
+    @media (min-width: 640px) { /* sm */
+      .footer-inner {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+    }
+
+    @media (min-width: 1024px) { /* lg */
+      .footer-inner {
+        padding-left: 32px;
+        padding-right: 32px;
+      }
+    }
+
+    .footer-top {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) { /* md */
+      .footer-top {
+        flex-direction: row;
+        text-align: left;
+      }
+    }
+
+    .footer-brand-block {
+      max-width: 320px;
+    }
+
+    .footer-brand-title {
+      font-size: 1.25rem; /* text-xl */
+      font-weight: 700;
+      color: #111827; /* text-gray-900 */
+    }
+
+    .footer-brand-desc {
+      margin-top: 4px;
+      font-size: 0.875rem;
+      line-height: 1.4;
+      color: var(--text-muted-light);
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .footer-link {
+      font-size: 0.875rem;
+      line-height: 1.4;
+      color: var(--text-muted-light);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-link:hover {
+      color: #111827; /* hover:text-gray-900 */
+    }
+
+    .footer-bottom {
+      padding-top: 32px;
+      margin-top: 32px;
+      border-top: 1px solid var(--border-light);
+      text-align: center;
+      font-size: 0.875rem;
+      color: #6b7280; /* text-gray-500 */
+    }
+
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: radial-gradient(circle at center, #1E334C, #05060A 70%);
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    /* ===== HEADER ===== */
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 15px;
+      width: 100%;
+      z-index: 10;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      max-width: 1200px;
+    }
+    nav {
+      background: white;
+      border-radius: 50px;
+      padding: 6px 15px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+    nav ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+    }
+    nav ul li a {
+      display: inline-block;
+      color: #000;
+      text-decoration: none;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: 0.2s ease;
+    }
+    nav ul li:first-child a {
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    nav ul li a:hover {
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+    }
+    .nav-right a {
+      color: #ccc;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: 0.2s ease;
+    }
+    .nav-right a:hover {
+      color: #fff;
+    }
+    /* ===== HERO ===== */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 100vh;
+      padding: 0 20px;
+    }
+    .hero h1 {
+      font-size: 64px;
+      line-height: 1.1;
+      font-weight: 500;
+      margin-bottom: 40px;
+    }
+    .hero button {
+      background: #fff;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 28px;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: 0.3s ease;
+    }
+    .hero button:hover {
+      transform: translateY(-3px);
+      background: #F3F3F3;
+    }
+    .hero button span {
+      background: #000;
+      color: #fff;
+      padding: 6px;
+      border-radius: 6px;
+      font-size: 14px;
+      line-height: 1;
+    }
+    .hero p {
+      color: #A0A7B3;
+      font-size: 13px;
+      margin-top: 25px;
+      max-width: 450px;
+      line-height: 1.6;
+    }
+    /* ===== RESPONSIVO ===== */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 44px;
+      }
+      nav ul li a {
+        padding: 8px 10px;
+      }
+    }
+
+    .logo {
+      width: 5%;
+      border-radius: 50%;
+    }
+
+    
