@@ -16,39 +16,147 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/buttons.css">
+    <link rel="stylesheet" href="assets/css/cards.css">
 
     <title>LodServices</title>
 </head>
 
 <body>
-    <header>
-        <div class="nav-container">
-            <img src="assets/img/logo.png" alt="" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="#">Docs</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Early Access</a></li>
-                </ul>
-            </nav>
-            <div class="nav-right">
-                <a href="#">DISCORD</a>
-                <a href="#">X</a>
+    <section class="fundo">
+        <header>
+            <div class="nav-container">
+                <img src="assets/img/logo.png" alt="" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Serviços</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-right">
+                    <a href="#">DISCORD</a>
+                    <a href="#">X</a>
+                </div>
             </div>
-        </div>
-    </header>
-    <section class="hero">
-        <h1>One Click.<br>Full Send.</h1>
-        <button>
-            Get Early Access <span>→</span>
-        </button>
-        <p>
-            Eco makes complex onchain actions a one-click stablecoin send.
-            With Eco, app developers can unlock stablecoin liquidity, simplify user experience,
-            and boost yield for your end users.
-        </p>
+        </header>
+        <section class="hero">
+            <h1>Tecnologia e design para quem quer crescer online.</h1>
+
+            <p>
+                Na <strong>LodServices</strong>, criamos sites modernos, rápidos e otimizados para resultados.
+                Você cuida do seu negócio — nós cuidamos da sua presença digital.
+            </p>
+        </section>
+
+        <!-- Seção LodServices: Tipos de Sites -->
+        <section class="container">
+            <div data-text="Landing Pages" style="--r:-15;" class="glass">
+                <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M64 64C28.7 64 0 92.7 0 128V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H64zm0 32H448c17.7 0 32 14.3 32 32V192H32V128c0-17.7 14.3-32 32-32zm384 320H64c-17.7 0-32-14.3-32-32V224H480v160c0 17.7-14.3 32-32 32z">
+                    </path>
+                </svg>
+            </div>
+
+            <div data-text="Sites Institucionais" style="--r:5;" class="glass">
+                <svg viewBox="0 0 640 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M320 0C195.3 0 96 99.3 96 224v96H64c-17.7 0-32 14.3-32 32v128H608V352c0-17.7-14.3-32-32-32H544V224C544 99.3 444.7 0 320 0zM176 320v-96c0-79.5 64.5-144 144-144s144 64.5 144 144v96H176z">
+                    </path>
+                </svg>
+            </div>
+
+            <div data-text="Lojas Virtuais" style="--r:25;" class="glass">
+                <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M528.12 301.319l47.273-208A16 16 0 0 0 559.65 80H118.345l-12.7-57.61A16 16 0 0 0 89.951 16H16A16 16 0 0 0 0 32V48a16 16 0 0 0 16 16h56.373l70.65 320H456a16 16 0 0 0 15.564-12.681L528.12 301.319zM456 400H153.373l-12.8-58h343.1zM456 432a48 48 0 1 1-48 48 48 48 0 0 1 48-48zm-288 0a48 48 0 1 1-48 48 48 48 0 0 1 48-48z">
+                    </path>
+                </svg>
+            </div>
+
+            <div data-text="Sistemas Web" style="--r:-20;" class="glass">
+                <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M480 32H32C14.3 32 0 46.3 0 64v384c0 17.7 14.3 32 32 32H480c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32zM96 432H64V80h32V432zm352 0H128V80H448V432z">
+                    </path>
+                </svg>
+            </div>
+
+            <div data-text="Portfólios" style="--r:10;" class="glass">
+                <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M320 64H192V32c0-17.7-14.3-32-32-32H32C14.3 0 0 14.3 0 32V64H320zM0 96V480c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V96H0zm288 384H64V128H288V480z">
+                    </path>
+                </svg>
+            </div>
+
+            <div data-text="Blogs e Notícias" style="--r:-8;" class="glass">
+                <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M480 32H32C14.3 32 0 46.3 0 64V448c0 17.7 14.3 32 32 32H480c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32zM192 384H64V320H192v64zm0-128H64V192H192v64zm0-128H64V64H192v64zm256 256H256V320H448v64zm0-128H256V192H448v64zm0-128H256V64H448v64z">
+                    </path>
+                </svg>
+            </div>
+        </section>
     </section>
+
+<section class="servicos">
+  <div class="container-servicos">
+
+    <!-- Texto principal -->
+    <div class="servicos-left">
+      <h2>Websites <span>autênticos e focados em resultados</span></h2>
+      <p>
+        A criação de sites da <strong>LodServices</strong> é ideal para empresas que desejam 
+        performance, personalização e impacto digital. 
+        Nossos projetos combinam design, tecnologia e estratégia.
+      </p>
+      <a href="#contato" class="btn-laranja">Solicitar uma proposta</a>
+
+      <div class="servicos-info">
+        <p>
+          Atender às principais métricas da Web Core Vitals pode reduzir em até 
+          <strong>24%</strong> as chances de um usuário abandonar o carregamento da página.
+        </p>
+        <span>— Chromium Blog</span>
+      </div>
+    </div>
+
+    <!-- Lista de diferenciais -->
+    <div class="servicos-right">
+      <div class="item-servico">
+        <h4>Sites responsivos e de alto desempenho</h4>
+        <p>Perfeitos em desktops e dispositivos móveis, com carregamento rápido e fluidez.</p>
+      </div>
+      <div class="seta">↓</div>
+
+      <div class="item-servico">
+        <h4>Otimização para o Google (SEO)</h4>
+        <p>Estrutura otimizada para ranqueamento e melhor visibilidade nas buscas.</p>
+      </div>
+      <div class="seta">↓</div>
+
+      <div class="item-servico">
+        <h4>Layout e conteúdo personalizados</h4>
+        <p>Feito sob medida para refletir a identidade da sua marca e gerar conversões reais.</p>
+      </div>
+      <div class="seta">↓</div>
+
+      <div class="item-servico">
+        <h4>Ferramenta de venda direta</h4>
+        <p>Projetos que transformam visitantes em clientes, otimizando conversões.</p>
+      </div>
+      <div class="seta">↓</div>
+
+      <div class="item-servico">
+        <h4>Projetos exclusivos e sob medida</h4>
+        <p>Sem templates prontos — cada site é pensado do zero para o seu negócio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 
     <footer class="footer">
@@ -56,29 +164,27 @@
             <div class="footer-top">
                 <!-- bloco marca -->
                 <div class="footer-brand-block">
-                    <h3 class="footer-brand-title">YourBrand</h3>
+                    <h3 class="footer-brand-title">LodServices</h3>
                     <p class="footer-brand-desc">
-                        Building the future, one step at a time.
+                        Construindo o futuro, um passo de cada vez.
                     </p>
                 </div>
 
                 <!-- navegação -->
                 <nav class="footer-nav">
-                    <a href="#" class="footer-link">About</a>
-                    <a href="#" class="footer-link">Services</a>
-                    <a href="#" class="footer-link">Contact</a>
-                    <a href="#" class="footer-link">Privacy</a>
-                    <a href="#" class="footer-link">Terms</a>
+                    <a href="#" class="footer-link">Sobre</a>
+                    <a href="#" class="footer-link">Serviços</a>
+                    <a href="#" class="footer-link">Contato</a>
                 </nav>
             </div>
 
             <div class="footer-bottom">
-                <p>© 2024 YourBrand. All rights reserved.</p>
+                <p>© 2024 LodServices. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-
+    <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>
