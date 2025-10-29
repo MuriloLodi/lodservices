@@ -7,8 +7,8 @@ body {
   overflow-x: hidden;
 }
 
-.fundo{
-    background: radial-gradient(circle at center, #1E334C, #05060A 70%);
+.fundo {
+  background: radial-gradient(circle at center, #1E334C, #05060A 70%);
 }
 
 :root {
@@ -178,18 +178,109 @@ nav ul li a:hover {
   border-radius: 8px;
 }
 
-.nav-right a {
-  color: #ccc;
-  font-size: 11px;
-  letter-spacing: 1px;
-  text-decoration: none;
-  margin-left: 20px;
-  transition: 0.2s ease;
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
 }
 
-.nav-right a:hover {
-  color: #fff;
+.social-pill {
+  --ring-color: 255,255,255;
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px solid rgba(var(--ring-color), 0.12);
+  background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  transition: all .25s ease;
+  overflow: hidden;
 }
+
+.social-pill svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+  color: #ffffff;
+  transition: color .25s ease;
+  z-index: 1;
+}
+
+.social-pill .shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent);
+  transform: translateX(-120%);
+  transition: transform .7s ease;
+  z-index: 0;
+}
+
+.social-pill:hover {
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0 16px 40px rgba(255,255,255,0.18);
+  border-color: rgba(var(--ring-color), .35);
+}
+.social-pill:hover .shine { transform: translateX(120%); }
+.social-pill:active { transform: scale(.95) rotate(0deg); }
+
+/* === cores específicas === */
+.social-pill.discord { --ring-color: 88,101,242; }
+.social-pill.discord:hover {
+  background: linear-gradient(135deg, rgba(88,101,242,.15), rgba(0,0,0,.45));
+  box-shadow: 0 16px 40px rgba(88,101,242,.35);
+}
+
+.social-pill.x { --ring-color: 99,102,241; }
+.social-pill.x:hover {
+  background: linear-gradient(135deg, rgba(99,102,241,.15), rgba(0,0,0,.45));
+  box-shadow: 0 16px 40px rgba(99,102,241,.35);
+}
+
+.social-pill.insta { --ring-color: 225,48,108; }
+.social-pill.insta:hover {
+  background: linear-gradient(135deg, rgba(99,102,241,.15), rgba(0,0,0,.45));
+  box-shadow: 0 16px 40px rgba(99,102,241,.35);
+}
+
+/* responsivo */
+@media (max-width: 768px) {
+  .nav-right { gap: 10px; }
+  .social-pill { width: 50px; height: 50px; }
+  .social-pill svg { width: 26px; height: 26px; }
+}
+/* Instagram no mesmo padrão dos outros */
+.social-pill.insta {
+  --ring-color: 255,255,255;
+  border: 1px solid rgba(var(--ring-color), 0.12);
+  background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  overflow: hidden;
+}
+
+.insta-icon {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1); /* deixa o SVG branco */
+  opacity: 0.95;
+  z-index: 1;
+  position: relative;
+  transition: transform .25s ease;
+}
+
+.social-pill.insta:hover .insta-icon { transform: scale(1.1); }
+.social-pill.insta:active { transform: scale(.95) rotate(0deg); }
+
 
 /* ===== HERO ===== */
 .hero {
@@ -198,7 +289,7 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 230px 0px 50px 0px;
+  padding: 260px 0px 50px 0px;
 
 }
 

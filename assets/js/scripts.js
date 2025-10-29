@@ -10,19 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }, {
-        threshold: 0.90
+        threshold: 0.80
     });
 
     cards.forEach(card => observer.observe(card));
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const imgSobre = document.querySelector('.img-sobre img');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('active');
-    });
-  }, { threshold: 0.7 });
-
-  observer.observe(imgSobre);
 });
