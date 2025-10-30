@@ -308,7 +308,7 @@ nav ul li a:hover {
 
 .hero p {
   color: #A0A7B3;
-  font-size: 13px;
+  font-size: 15px;
   margin-top: 25px;
   max-width: 450px;
   line-height: 1.6;
@@ -501,74 +501,6 @@ nav ul {
 }
 
 
-/* ===== SEÇÃO CONTATO ===== */
-.contato-projeto {
-  position: relative;
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  background: linear-gradient(120deg, #05060A, #1E334C);
-}
-
-.contato-projeto::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 30% 30%, #1E334C(0, 255, 130, 0.4), transparent 40%),
-    radial-gradient(circle at 70% 70%, #1E334C(0, 255, 200, 0.3), transparent 50%),
-    radial-gradient(circle at 60% 20%, 1E334C(0, 255, 150, 0.5), transparent 60%);
-  animation: moverFundo 10s ease-in-out infinite alternate;
-  filter: blur(100px);
-  z-index: 0;
-}
-
-@keyframes moverFundo {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-
-  50% {
-    transform: translate(-10%, 10%) scale(1.1);
-  }
-
-  100% {
-    transform: translate(10%, -10%) scale(1.05);
-  }
-}
-
-.conteudo {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  color: #fff;
-}
-
-.conteudo h1 {
-  font-size: 4rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  line-height: 1.1;
-}
-
-.btn-contato {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 14px 30px;
-  border-radius: 50px;
-  background: #00ff88;
-  color: #000;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn-contato:hover {
-  background: #00cc6a;
-  transform: translateY(-3px);
-}
-
 @media (max-width: 768px) {
   .conteudo h1 {
     font-size: 2.2rem;
@@ -579,10 +511,10 @@ nav ul {
   }
 }
 
-/* ===== SEÇÃO "VAMOS CONVERSAR SOBRE SEU PROJETO" ===== */
+
 .contato-projeto {
   position: relative;
-  height: 80vh;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -596,47 +528,23 @@ nav ul {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 30% 30%, rgba(30, 51, 76, 0.6), transparent 40%),
-    radial-gradient(circle at 70% 70%, rgba(5, 6, 10, 0.6), transparent 60%),
-    radial-gradient(circle at 50% 50%, rgba(30, 51, 76, 0.8), transparent 70%);
-  filter: blur(120px);
-  animation: moverAzulEscuro 18s ease-in-out infinite alternate;
-  transform: scale(1.1);
+  pointer-events: none;
+  background:
+    radial-gradient(40% 40% at 30% 30%, rgba(30, 51, 76, .55), transparent 60%),
+    radial-gradient(45% 45% at 70% 70%, rgba(5, 6, 10, .55), transparent 65%),
+    radial-gradient(50% 50% at 55% 45%, rgba(30, 51, 76, .65), transparent 70%);
+  filter: blur(60px);
+  transform: scale(1.05);
   z-index: 0;
-}
-
-.contato-projeto::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
-  z-index: 1;
-}
-
-@keyframes moverAzulEscuro {
-  0% {
-    transform: translate(0, 0) scale(1.1);
-    filter: blur(110px);
-  }
-
-  50% {
-    transform: translate(-5%, 5%) scale(1.15);
-    filter: blur(130px);
-  }
-
-  100% {
-    transform: translate(5%, -5%) scale(1.1);
-    filter: blur(120px);
-  }
 }
 
 .conteudo {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .conteudo h1 {
-  font-size: 4rem;
+  font-size: clamp(2.3rem, 6vw, 4rem);
   font-weight: 800;
   line-height: 1.1;
   text-transform: uppercase;
@@ -660,6 +568,7 @@ nav ul {
   transform: translateY(-3px);
 }
 
+
 @media (max-width: 768px) {
   .conteudo h1 {
     font-size: 2.3rem;
@@ -671,7 +580,7 @@ nav ul {
   }
 }
 
-/* ===== FOOTER — Padrão LodServices ===== */
+
 footer.footer {
   width: 100%;
   background:
