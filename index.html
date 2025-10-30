@@ -5,18 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Boostrap 5-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <!---->
 
-    <!--ScrollReveal-->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <!---->
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/buttons.css">
     <link rel="stylesheet" href="assets/css/cards.css">
+    <link rel="shortcut icon" href="assets/img/ico.ico" type="image/x-icon">
 
     <title>LodServices</title>
 </head>
@@ -26,17 +23,9 @@
         <header>
             <div class="nav-container">
                 <img src="assets/img/logo3.png" alt="" class="logo">
-                <nav>
-                    <ul>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Serviços</a></li>
-                        <li><a href="#">Contato</a></li>
-                    </ul>
-                </nav>
                 <div class="nav-right">
-                    <!-- Discord -->
-                    <a class="social-pill discord" href="https://discord.com/invite/seu-link" target="_blank"
-                        rel="noopener" aria-label="Discord">
+                    <a class="social-pill discord" href="https://discord.gg/aGbEyuJwq2" target="_blank" rel="noopener"
+                        aria-label="Discord">
                         <span class="shine"></span>
                         <svg viewBox="0 0 640 512" aria-hidden="true">
                             <path
@@ -44,19 +33,17 @@
                         </svg>
                     </a>
 
-                    <!-- X -->
-                    <a class="social-pill x" href="https://x.com/seu-usuario" target="_blank" rel="noopener"
-                        aria-label="X (Twitter)">
+                    <a class="social-pill discord" href="https://wa.me/5545999997579" target="_blank" rel="noopener"
+                        aria-label="WhatsApp">
                         <span class="shine"></span>
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
                             <path
-                                d="M18.244 2H21.5l-7.51 8.58L22.5 22h-5.84l-4.57-5.41L6.8 22H3.54l8.05-9.19L1.9 2h5.97l4.13 4.86L18.24 2Zm-2.04 18h1.53L7.88 4H6.27l9.934 16Z" />
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.149-.671.15-.198.297-.769.966-.941 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.671-1.612-.919-2.207-.242-.579-.487-.5-.671-.51-.174-.009-.372-.011-.571-.011a1.1 1.1 0 0 0-.795.372c-.273.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.099 3.205 5.088 4.492.711.306 1.264.489 1.696.626.713.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.004 2C6.486 2 2 6.486 2 12.004c0 2.118.556 4.084 1.619 5.845L2 22l4.256-1.582A9.942 9.942 0 0 0 12.004 22C17.522 22 22 17.514 22 12.004 22 6.486 17.522 2 12.004 2zM12 20.2a8.193 8.193 0 0 1-4.175-1.145l-.3-.179-2.474.921.826-2.406-.196-.31A8.183 8.183 0 0 1 3.8 12.004c0-4.525 3.674-8.2 8.2-8.2 4.524 0 8.2 3.675 8.2 8.2 0 4.524-3.676 8.196-8.2 8.196z" />
                         </svg>
                     </a>
 
-                    <!-- Instagram  -->
-                    <a class="social-pill insta" href="https://instagram.com/seuusuario" target="_blank" rel="noopener"
-                        aria-label="Instagram">
+                    <a class="social-pill discord" href="https://www.instagram.com/lodservices" target="_blank"
+                        rel="noopener" aria-label="Instagram">
                         <span class="shine"></span>
                         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
                             alt="Instagram" class="insta-icon">
@@ -68,7 +55,7 @@
 
             </div>
         </header>
-        <section class="hero">
+        <section class="hero" id="sobre">
             <h1>Tecnologia e design para quem quer crescer online.</h1>
 
             <p>
@@ -78,62 +65,68 @@
 
         </section>
 
-        <!-- Seção LodServices: Tipos de Sites -->
         <section class="container">
-            <div data-text="Landing Pages" style="--r:-15;" class="glass">
-                <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M64 64C28.7 64 0 92.7 0 128V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H64zm0 32H448c17.7 0 32 14.3 32 32V192H32V128c0-17.7 14.3-32 32-32zm384 320H64c-17.7 0-32-14.3-32-32V224H480v160c0 17.7-14.3 32-32 32z">
-                    </path>
-                </svg>
-            </div>
+            <div>
+                <div>
+                    <h2 class="text-center titulo-pq title mb-5">Escolha o Tipo de Site Ideal para Você</h2>
+                </div>
 
-            <div data-text="Sites Institucionais" style="--r:5;" class="glass">
-                <svg viewBox="0 0 640 512" height="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M320 0C195.3 0 96 99.3 96 224v96H64c-17.7 0-32 14.3-32 32v128H608V352c0-17.7-14.3-32-32-32H544V224C544 99.3 444.7 0 320 0zM176 320v-96c0-79.5 64.5-144 144-144s144 64.5 144 144v96H176z">
-                    </path>
-                </svg>
-            </div>
+                <div class="services">
+                    <div data-text="Landing Pages" style="--r:-15;" class="glass">
+                        <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M64 64C28.7 64 0 92.7 0 128V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H64zm0 32H448c17.7 0 32 14.3 32 32V192H32V128c0-17.7 14.3-32 32-32zm384 320H64c-17.7 0-32-14.3-32-32V224H480v160c0 17.7-14.3 32-32 32z">
+                            </path>
+                        </svg>
+                    </div>
 
-            <div data-text="Lojas Virtuais" style="--r:25;" class="glass">
-                <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M528.12 301.319l47.273-208A16 16 0 0 0 559.65 80H118.345l-12.7-57.61A16 16 0 0 0 89.951 16H16A16 16 0 0 0 0 32V48a16 16 0 0 0 16 16h56.373l70.65 320H456a16 16 0 0 0 15.564-12.681L528.12 301.319zM456 400H153.373l-12.8-58h343.1zM456 432a48 48 0 1 1-48 48 48 48 0 0 1 48-48zm-288 0a48 48 0 1 1-48 48 48 48 0 0 1 48-48z">
-                    </path>
-                </svg>
-            </div>
+                    <div data-text="Sites Institucionais" style="--r:5;" class="glass">
+                        <svg viewBox="0 0 640 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M320 0C195.3 0 96 99.3 96 224v96H64c-17.7 0-32 14.3-32 32v128H608V352c0-17.7-14.3-32-32-32H544V224C544 99.3 444.7 0 320 0zM176 320v-96c0-79.5 64.5-144 144-144s144 64.5 144 144v96H176z">
+                            </path>
+                        </svg>
+                    </div>
 
-            <div data-text="Sistemas Web" style="--r:-20;" class="glass">
-                <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M480 32H32C14.3 32 0 46.3 0 64v384c0 17.7 14.3 32 32 32H480c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32zM96 432H64V80h32V432zm352 0H128V80H448V432z">
-                    </path>
-                </svg>
-            </div>
+                    <div data-text="Lojas Virtuais" style="--r:25;" class="glass">
+                        <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M528.12 301.319l47.273-208A16 16 0 0 0 559.65 80H118.345l-12.7-57.61A16 16 0 0 0 89.951 16H16A16 16 0 0 0 0 32V48a16 16 0 0 0 16 16h56.373l70.65 320H456a16 16 0 0 0 15.564-12.681L528.12 301.319zM456 400H153.373l-12.8-58h343.1zM456 432a48 48 0 1 1-48 48 48 48 0 0 1 48-48zm-288 0a48 48 0 1 1-48 48 48 48 0 0 1 48-48z">
+                            </path>
+                        </svg>
+                    </div>
 
-            <div data-text="Portfólios" style="--r:10;" class="glass">
-                <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M320 64H192V32c0-17.7-14.3-32-32-32H32C14.3 0 0 14.3 0 32V64H320zM0 96V480c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V96H0zm288 384H64V128H288V480z">
-                    </path>
-                </svg>
-            </div>
+                    <div data-text="Sistemas Web" style="--r:-20;" class="glass">
+                        <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M480 32H32C14.3 32 0 46.3 0 64v384c0 17.7 14.3 32 32 32H480c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32zM96 432H64V80h32V432zm352 0H128V80H448V432z">
+                            </path>
+                        </svg>
+                    </div>
 
-            <div data-text="Blogs e Notícias" style="--r:-8;" class="glass">
-                <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M480 32H32C14.3 32 0 46.3 0 64V448c0 17.7 14.3 32 32 32H480c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32zM192 384H64V320H192v64zm0-128H64V192H192v64zm0-128H64V64H192v64zm256 256H256V320H448v64zm0-128H256V192H448v64zm0-128H256V64H448v64z">
-                    </path>
-                </svg>
+                    <div data-text="Portfólios" style="--r:10;" class="glass">
+                        <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M320 64H192V32c0-17.7-14.3-32-32-32H32C14.3 0 0 14.3 0 32V64H320zM0 96V480c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V96H0zm288 384H64V128H288V480z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <div data-text="Blogs e Notícias" style="--r:-8;" class="glass">
+                        <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M480 32H32C14.3 32 0 46.3 0 64V448c0 17.7 14.3 32 32 32H480c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32zM192 384H64V320H192v64zm0-128H64V192H192v64zm0-128H64V64H192v64zm256 256H256V320H448v64zm0-128H256V192H448v64zm0-128H256V64H448v64z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
             </div>
         </section>
     </section>
 
-    <section class="servicos">
+    <section class="servicos" id="services">
         <div class="container-servicos">
 
-            <!-- Texto principal -->
             <div class="servicos-left">
                 <h2 class="titulo-pq">Websites <span>autênticos e focados em resultados</span></h2>
                 <p>
@@ -141,11 +134,10 @@
                     performance, personalização e impacto digital.
                     Nossos projetos combinam design, tecnologia e estratégia.
                 </p>
-                <!-- Botão LodServices -->
-                <button class="button">
-                    <div class="blob1"></div>
-                    <div class="inner">Solicitar uma proposta</div>
-                </button>
+                <a href="https://wa.me/5545999997579" target="_blank"> <button class="button">
+                        <div class="blob1"></div>
+                        <div class="inner">Solicitar uma proposta</div>
+                    </button></a>
 
 
 
@@ -158,7 +150,6 @@
                 </div>
             </div>
 
-            <!-- Lista de diferenciais -->
             <div class="servicos-right">
                 <div class="item-servico">
                     <h4>Sites responsivos e de alto desempenho</h4>
@@ -188,8 +179,6 @@
         </div>
     </section>
 
-
-    <!-- SEÇÃO: POR QUE ESCOLHER A LODSERVICES -->
     <section class="pq-lod">
         <div class="container">
             <div class="text-center mb-5">
@@ -200,7 +189,6 @@
             </div>
 
             <div class="row justify-content-center gy-4">
-                <!-- CARD 1 -->
                 <div class="col-md-6 col-lg-3 d-flex justify-content-center">
                     <div class="outer">
                         <div class="dot"></div>
@@ -216,7 +204,6 @@
                     </div>
                 </div>
 
-                <!-- CARD 2 -->
                 <div class="col-md-6 col-lg-3 d-flex justify-content-center">
                     <div class="outer">
                         <div class="dot"></div>
@@ -232,7 +219,6 @@
                     </div>
                 </div>
 
-                <!-- CARD 3 -->
                 <div class="col-md-6 col-lg-3 d-flex justify-content-center">
                     <div class="outer">
                         <div class="dot"></div>
@@ -248,7 +234,6 @@
                     </div>
                 </div>
 
-                <!-- CARD 4 -->
                 <div class="col-md-6 col-lg-3 d-flex justify-content-center">
                     <div class="outer">
                         <div class="dot"></div>
@@ -268,12 +253,11 @@
     </section>
 
 
-    <section class="contato-projeto">
+    <section class="contato-projeto" id="contatos">
         <div class="conteudo">
             <h1 class="mb-5">VAMOS CONVERSAR SOBRE<br>SEU PROJETO?</h1>
 
-            <!-- Botão LodServices -->
-            <a href="https://wa.me/5545999999999" target="_blank"><button class="button">
+            <a href="https://wa.me/5545999997579" target="_blank"><button class="button">
                     <div class="blob1"></div>
                     <div class="inner">COMECE SEU PROJETO</div>
                 </button></a>
@@ -284,19 +268,16 @@
     <footer class="footer">
         <div class="footer-inner">
             <div class="footer-top">
-                <!-- bloco marca -->
                 <div class="footer-brand-block">
                     <h3 class="footer-brand-title">LodServices</h3>
                     <p class="footer-brand-desc">
                         Construindo o futuro, um passo de cada vez.
                     </p>
                 </div>
-
-                <!-- navegação -->
                 <nav class="footer-nav">
-                    <a href="#" class="footer-link">Sobre</a>
-                    <a href="#" class="footer-link">Serviços</a>
-                    <a href="#" class="footer-link">Contato</a>
+                    <a href="#sobre" class="footer-link">Sobre</a>
+                    <a href="#services" class="footer-link">Serviços</a>
+                    <a href="#contatos" class="footer-link">Contato</a>
                 </nav>
             </div>
 
@@ -306,6 +287,8 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="assets/js/scripts.js"></script>
 </body>
 
