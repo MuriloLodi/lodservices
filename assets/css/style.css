@@ -289,8 +289,7 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 260px 0px 50px 0px;
-
+  padding: 320px 0px 160px 0px !important;
 }
 
 .hero h1 {
@@ -312,16 +311,20 @@ nav ul li a:hover {
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 44px;
+    width: 90%;
   }
 
   nav ul li a {
     padding: 8px 10px;
   }
+  .logo{
+    width: 22% !important;
+  }
 }
 
 .logo {
-  width: 5%;
-  border-radius: 50%;
+  width: 16%;
+
 }
 
 nav ul {
@@ -646,4 +649,96 @@ nav ul {
     margin-top: 25px;
     padding: 12px 24px;
   }
+}
+/* ===== FOOTER — Padrão LodServices (dark) ===== */
+footer.footer {
+  width: 100%;
+  background:
+    radial-gradient(80% 120% at 80% -20%, rgba(30, 51, 76, 0.25), transparent 60%),
+    linear-gradient(180deg, #0a0b10 0%, #05060A 100%);
+  border-top: 1px solid var(--border-dark);
+  color: var(--text-light);
+}
+
+/* container */
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+/* layout */
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-inner { padding-left: 32px; padding-right: 32px; }
+  .footer-top { flex-direction: row; text-align: left; }
+}
+
+/* marca */
+.footer-brand-block { max-width: 360px; }
+.footer-brand-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff; /* antes #111827 */
+}
+.footer-brand-desc {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #A0A7B3; /* texto secundário do site */
+}
+
+/* navegação */
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+}
+
+.footer-link {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #000000;              /* slate-300 */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .2s ease, transform .2s ease, text-shadow .2s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus-visible {
+  color: #000000;
+  text-shadow: 0 0 18px rgba(30, 51, 76, 0.55); /* glow azul */
+  transform: translateY(-1px);
+  outline: none;
+}
+
+/* base */
+.footer-bottom {
+  padding-top: 28px;
+  margin-top: 28px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+  font-size: 0.9rem;
+  color: #94a3b8;              /* slate-400 */
+}
+
+/* pill social dentro do footer (opcional, harmoniza com header) */
+footer.footer .social-pill {
+  border-color: rgba(255,255,255,.12);
+  background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+footer.footer .social-pill:hover {
+  transform: scale(1.06) rotate(1deg);
+  box-shadow: 0 16px 40px rgba(30,51,76,.35);
+  border-color: rgba(255,255,255,.35);
 }
