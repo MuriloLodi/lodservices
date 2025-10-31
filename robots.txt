@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lodservices.com.br/sitemap.xml
