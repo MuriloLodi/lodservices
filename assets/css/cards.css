@@ -3,7 +3,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   gap: 10px;
   padding: 10px 0px 90px 0px;
@@ -182,7 +182,6 @@
 /* ===== SEÇÃO POR QUE ESCOLHER ===== */
 .pq-lod {
   background: linear-gradient(135deg, #0a0b10 0%, #0f1a2b 40%, #0a0b10 100%);
-  padding: 100px 10%;
   color: #fff;
   overflow: hidden;
   position: relative;

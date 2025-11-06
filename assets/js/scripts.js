@@ -26,11 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
         reset: false
     });
 
-    sr.reveal("header .logo", { origin: "left" });
-    sr.reveal("header nav", { origin: "top", delay: 100 });
-    sr.reveal(".nav-right .social-pill", { origin: "right", interval: 120 });
-
-
     sr.reveal(".hero h1", { origin: "bottom", delay: 200 });
     sr.reveal(".hero p", { origin: "bottom", delay: 300 });
     sr.reveal(".hero .button", { origin: "bottom", delay: 400 });
@@ -54,8 +49,87 @@ document.addEventListener("DOMContentLoaded", () => {
     sr.reveal(".contato-projeto .conteudo h1", { origin: "top", delay: 150 });
     sr.reveal(".contato-projeto .button", { origin: "bottom", delay: 300 });
 
+});
 
-    sr.reveal("footer .footer-brand-block", { origin: "left", delay: 100 });
-    sr.reveal("footer .footer-nav", { origin: "right", delay: 200 });
-    sr.reveal("footer .footer-bottom", { origin: "bottom", delay: 300 });
+ const pills = document.querySelectorAll('.pill');
+  const dynamicText = document.getElementById('dynamicText');
+
+  pills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      pills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+
+      const newText = pill.getAttribute('data-text');
+      dynamicText.classList.add('fade-out');
+
+      setTimeout(() => {
+        dynamicText.textContent = newText;
+        dynamicText.classList.remove('fade-out');
+        dynamicText.classList.add('fade-in');
+        setTimeout(() => dynamicText.classList.remove('fade-in'), 250);
+      }, 200);
+    });
+  });
+
+document.addEventListener('DOMContentLoaded', () => {
+  new Swiper('.servicos-swiper', {
+    loop: true,
+    speed: 700,
+    autoplay: {
+      delay: 2800,
+      disableOnInteraction: false
+    },
+    spaceBetween: 18,
+    slidesPerView: 1,           // mobile
+    breakpoints: {
+      768: { slidesPerView: 2, spaceBetween: 20 },   // tablet
+      1200:{ slidesPerView: 4, spaceBetween: 22 }    // desktop (4 cards)
+    },
+    pagination: {
+      el: '.servicos-swiper .swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.servicos-swiper .swiper-button-next',
+      prevEl: '.servicos-swiper .swiper-button-prev'
+    },
+    grabCursor: true
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.portfolio-swiper');
+
+  const swiper = new Swiper(container, {
+    loop: true,
+    effect: 'fade',
+    speed: 1000,
+    fadeEffect: { crossFade: true },
+    autoplay: { delay: 3500, disableOnInteraction: false },
+    pagination: { el: '.portfolio-swiper .swiper-pagination', clickable: true },
+  });
+
+  // Conta apenas os slides reais (ignora os duplicados do loop)
+  const countRealSlides = () =>
+    container.querySelectorAll('.swiper-wrapper > .swiper-slide:not(.swiper-slide-duplicate)').length;
+
+  const pad2 = n => String(n).padStart(2, '0');
+
+  // Atualiza o "01 / 06"
+  const updateCounts = () => {
+    const total = countRealSlides();
+    // escreve o total em todos os contadores
+    container.querySelectorAll('.pf-count .total').forEach(el => (el.textContent = pad2(total)));
+    // escreve o current apenas no slide visível (active)
+    const currentEl = container.querySelector('.swiper-slide-active .pf-count .current');
+    if (currentEl) currentEl.textContent = pad2(swiper.realIndex + 1);
+  };
+
+  // Eventos que podem mudar a contagem/active
+  swiper.on('init', updateCounts);
+  swiper.on('slideChange', updateCounts);
+  swiper.on('slidesLengthChange', updateCounts);
+
+  // Primeira atualização
+  updateCounts();
 });
