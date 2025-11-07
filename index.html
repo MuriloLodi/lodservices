@@ -50,6 +50,11 @@
             <div class="container">
                 <div class="nav-container">
                     <img src="assets/img/logo3.png" alt="" class="logo" />
+                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Abrir menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
 
                     <nav>
                         <ul class="d-flex gap-4">
@@ -93,7 +98,44 @@
                     </div>
                 </div>
             </div>
+
         </header>
+        <div class="offcanvas offcanvas-end offcanvas-lod d-lg-none" tabindex="-1" id="mobileMenu"
+            aria-labelledby="mobileMenuLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Fechar"></button>
+            </div>
+
+            <div class="offcanvas-body d-flex flex-column gap-2">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="#hero"
+                            data-bs-dismiss="offcanvas">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#servico"
+                            data-bs-dismiss="offcanvas">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#contatos"
+                            data-bs-dismiss="offcanvas">Contato</a></li>
+                </ul>
+
+                <hr class="border-secondary my-3">
+
+                <a href="https://wa.me/5545999997579" target="_blank" class="btn btn-outline-light w-100"
+                    rel="noopener" aria-label="WhatsApp">
+                    COMECE SEU PROJETO
+                </a>
+
+                <div class="d-flex gap-2 mt-2">
+                    <a class="btn btn-outline-light flex-fill" href="https://discord.gg/aGbEyuJwq2" target="_blank"
+                        rel="noopener" aria-label="Discord">Discord</a>
+                    <a class="btn btn-outline-light flex-fill" href="https://wa.me/5545999997579" target="_blank"
+                        rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+                    <a class="btn btn-outline-light flex-fill" href="https://www.instagram.com/lodservices"
+                        target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+                </div>
+            </div>
+        </div>
+
 
         <section id="hero" class="container hero">
             <div class="service-buttons">
@@ -233,9 +275,9 @@
                         empresas que desejam performance, personalização e impacto digital.
                         Nossos projetos combinam design, tecnologia e estratégia.
                     </p>
-                                <a href="https://wa.me/5545999997579" target="_blank" class="btn-contato">
-                COMECE SEU PROJETO
-            </a>
+                    <a href="https://wa.me/5545999997579" target="_blank" class="btn-contato">
+                        COMECE SEU PROJETO
+                    </a>
 
                     <div class="servicos-info">
                         <p>
@@ -371,9 +413,9 @@
             <div class="conteudo">
                 <h1 class="mb-5">VAMOS CONVERSAR SOBRE<br />SEU PROJETO?</h1>
 
-                            <a href="https://wa.me/5545999997579" target="_blank" class="btn-contato">
-                COMECE SEU PROJETO
-            </a>
+                <a href="https://wa.me/5545999997579" target="_blank" class="btn-contato">
+                    COMECE SEU PROJETO
+                </a>
             </div>
         </div>
     </section>

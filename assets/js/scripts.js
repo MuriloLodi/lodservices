@@ -133,3 +133,30 @@ document.addEventListener('DOMContentLoaded', () => {
   // Primeira atualização
   updateCounts();
 });
+
+
+  (function () {
+    const ocEl = document.getElementById('mobileMenu');
+    if (!ocEl) return;
+
+    const oc = bootstrap.Offcanvas.getOrCreateInstance(ocEl);
+
+    ocEl.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const hash = link.getAttribute('href');
+        const target = document.querySelector(hash);
+
+        const onHidden = () => {
+          ocEl.removeEventListener('hidden.bs.offcanvas', onHidden);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            history.replaceState(null, '', hash);
+          }
+        };
+        ocEl.addEventListener('hidden.bs.offcanvas', onHidden);
+        oc.hide();
+      });
+    });
+  })();
