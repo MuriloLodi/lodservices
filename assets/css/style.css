@@ -137,13 +137,14 @@ header {
 
 .nav-container {
   padding: 10px;
-  background: radial-gradient(circle at center, #1e334c, #05060a 70%);
+  background: #0d1925;
   display: flex;
-  border: 1px solid white;
+  border: 1px solid rgba(var(--ring-color), 0.12);
   border-radius: 60px;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -1143,10 +1144,10 @@ footer.footer .social-pill:hover {
 .offcanvas-lod {
 
   --bs-offcanvas-width: min(88vw, 360px) !important;
-  --bs-offcanvas-transition: transform .42s cubic-bezier(.22,.61,.36,1) !important;
+  --bs-offcanvas-transition: transform .42s cubic-bezier(.22, .61, .36, 1) !important;
 
-  --bs-offcanvas-bg: transparent !important; 
-  border-left: 1px solid rgba(255,255,255,.12) !important;
+  --bs-offcanvas-bg: transparent !important;
+  border-left: 1px solid rgba(255, 255, 255, .12) !important;
   border-top-left-radius: 18px !important;
   border-bottom-left-radius: 18px !important;
   overflow: hidden !important;
@@ -1155,7 +1156,8 @@ footer.footer .social-pill:hover {
 
 .offcanvas-lod::before {
   content: "";
-  position: absolute; inset: 0;
+  position: absolute;
+  inset: 0;
   background:
     radial-gradient(circle at center, #1E334C, #05060A 70%) !important;
   backdrop-filter: blur(6px);
@@ -1166,9 +1168,10 @@ footer.footer .social-pill:hover {
 
 .offcanvas-lod .offcanvas-header {
   padding: 18px 20px;
-  border-bottom: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
   color: #fff;
 }
+
 .offcanvas-lod .offcanvas-title {
   font-weight: 800;
   letter-spacing: .02em;
@@ -1179,7 +1182,11 @@ footer.footer .social-pill:hover {
   padding: 18px 20px 24px;
   color: #fff;
 }
-.offcanvas-lod .navbar-nav { gap: 4px; }
+
+.offcanvas-lod .navbar-nav {
+  gap: 4px;
+}
+
 .offcanvas-lod .nav-link {
   color: #fff;
   font-weight: 700;
@@ -1188,53 +1195,77 @@ footer.footer .social-pill:hover {
   padding: 12px 10px;
   transition: transform .2s ease, background .2s ease, color .2s ease;
 }
+
 .offcanvas-lod .nav-link:hover,
 .offcanvas-lod .nav-link:focus {
-  background: rgba(255,255,255,.08);
+  background: rgba(255, 255, 255, .08);
   transform: translateX(2px);
   color: #fff;
 }
 
 
-.offcanvas-lod .btn { border-radius: 999px; font-weight: 800; }
-.offcanvas-lod .btn-outline-light {
-  border-color: rgba(255,255,255,.35);
-  background: rgba(255,255,255,.06);
+.offcanvas-lod .btn {
+  border-radius: 999px;
+  font-weight: 800;
 }
+
+.offcanvas-lod .btn-outline-light {
+  border-color: rgba(255, 255, 255, .35);
+  background: rgba(255, 255, 255, .06);
+}
+
 .offcanvas-lod .btn-outline-light:hover {
-  background: #fff; color: #000;
+  background: #fff;
+  color: #000;
 }
 
 
 .offcanvas-backdrop {
   --bs-backdrop-bg: #000;
   --bs-backdrop-opacity: .55;
-  transition: opacity .42s cubic-bezier(.22,.61,.36,1);
+  transition: opacity .42s cubic-bezier(.22, .61, .36, 1);
 }
 
 
 .navbar-toggler {
   transition: transform .25s ease, box-shadow .25s ease;
 }
-.navbar-toggler:active { transform: scale(.96); }
-.navbar-toggler[aria-expanded="true"] { transform: rotate(90deg) scale(.98); }
+
+.navbar-toggler:active {
+  transform: scale(.96);
+}
+
+.navbar-toggler[aria-expanded="true"] {
+  transform: rotate(90deg) scale(.98);
+}
 
 
 @media (prefers-reduced-motion: reduce) {
-  .offcanvas-lod { --bs-offcanvas-transition: none; }
-  .offcanvas-backdrop { transition: none; }
-  .navbar-toggler { transition: none; }
+  .offcanvas-lod {
+    --bs-offcanvas-transition: none;
+  }
+
+  .offcanvas-backdrop {
+    transition: none;
+  }
+
+  .navbar-toggler {
+    transition: none;
+  }
 }
 
 @media (max-width: 991.98px) {
+
   header nav,
-  header .nav-right { display: none !important; }
+  header .nav-right {
+    display: none !important;
+  }
 }
 
 
 .offcanvas-lod {
 
-  transition: var(--bs-offcanvas-transition, transform .42s cubic-bezier(.22,.61,.36,1));
+  transition: var(--bs-offcanvas-transition, transform .42s cubic-bezier(.22, .61, .36, 1));
   will-change: transform;
 }
 
@@ -1250,7 +1281,7 @@ footer.footer .social-pill:hover {
 }
 
 .offcanvas-backdrop {
-  transition: opacity .42s cubic-bezier(.22,.61,.36,1);
+  transition: opacity .42s cubic-bezier(.22, .61, .36, 1);
 }
 
 
@@ -1264,7 +1295,7 @@ footer.footer .social-pill:hover {
 
 .offcanvas-lod.offcanvas-end {
   transform: translateX(100%);
-  transition: transform .45s cubic-bezier(.22,.61,.36,1);
+  transition: transform .45s cubic-bezier(.22, .61, .36, 1);
   will-change: transform;
 }
 
@@ -1285,10 +1316,17 @@ footer.footer .social-pill:hover {
 
 
 .offcanvas-backdrop {
-  transition: opacity .45s cubic-bezier(.22,.61,.36,1);
+  transition: opacity .45s cubic-bezier(.22, .61, .36, 1);
 }
 
 
-section[id], header + section[id] {
-  scroll-margin-top: 110px; 
+section[id],
+header+section[id] {
+  scroll-margin-top: 110px;
+}
+
+@media (max-width: 400px) {
+  #hero h1 {
+    font-size: 28px !important;
+  }
 }
