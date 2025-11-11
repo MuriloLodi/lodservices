@@ -2,8 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lodservices.com.br/</loc>
-    <lastmod>2025-10-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2025-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://lodservices.com.br/blog.html</loc>
+    <lastmod>2025-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://lodservices.com.br/landingpage.html</loc>
+    <lastmod>2025-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://lodservices.com.br/lojasvirtuais.html</loc>
+    <lastmod>2025-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://lodservices.com.br/portfolios.html</loc>
+    <lastmod>2025-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://lodservices.com.br/sistemasweb.html</loc>
+    <lastmod>2025-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://lodservices.com.br/sitesinstitucionais.html</loc>
+    <lastmod>2025-11-10</lastmod>
   </url>
 </urlset>
