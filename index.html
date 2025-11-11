@@ -4,23 +4,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>
-        LodServices — Tecnologia e Design para Quem Quer Crescer Online
-    </title>
+    <title>LodServices — Tecnologia e Design para Quem Quer Crescer Online</title>
     <meta name="description"
         content="Na LodServices criamos sites modernos, rápidos e otimizados para resultados. Unimos design, tecnologia e estratégia para fortalecer a presença digital da sua marca e gerar mais conversões." />
-    <meta name="keywords"
-        content="criação de sites, desenvolvimento web, design de sites, SEO, performance digital, sites otimizados, web design, presença digital, LodServices" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://lodservices.com.br/" />
+    <meta name="theme-color" content="#05060A" />
 
+    <!-- Open Graph -->
     <meta property="og:title" content="LodServices — Tecnologia e Design para Quem Quer Crescer Online" />
     <meta property="og:description"
         content="Sites modernos, rápidos e otimizados para resultados. A LodServices cria projetos sob medida que unem design, tecnologia e performance." />
     <meta property="og:url" content="https://lodservices.com.br/" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lodservices.com.br/assets/img/logo3.png" />
+    <meta property="og:image" content="https://lodservices.com.br/assets/img/link.png" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -28,20 +25,31 @@
     <meta name="twitter:description"
         content="Criação de sites modernos e otimizados para resultados. Transforme sua presença digital com a LodServices." />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/buttons.css" />
-    <link rel="stylesheet" href="assets/css/cards.css" />
-    <link rel="shortcut icon" href="assets/img/ico.ico" type="image/x-icon" />
+
+    <link rel="preload" href="libs/bootstrap/css/bootstrap.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'"><noscript>
+        <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    </noscript>
+    <link rel="preload" href="libs/font-awesome/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'"><noscript>
+        <link rel="stylesheet" href="libs/font-awesome/css/all.min.css">
+    </noscript>
+    <link rel="preload" href="libs/swiper/swiper-bundle.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'"><noscript>
+        <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+    </noscript>
+    <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </noscript>
+     <link rel="shortcut icon" href="assets/img/ico.ico" type="image/x-icon" />
 </head>
 
 <body>
@@ -49,30 +57,28 @@
         <header>
             <div class="container">
                 <div class="nav-container">
-                    <img src="assets/img/logo3.png" alt="" class="logo" />
+                    <a href="index.html">
+                        <img src="assets/img/logo3.png" alt="LodServices — Criação de Sites Institucionais" class="logo"
+                            fetchpriority="high" decoding="async" width="160" height="48">
+                    </a>
+
                     <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Abrir menu">
+                        data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Abrir menu"
+                        aria-expanded="false">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-
-                    <nav>
+                    <nav role="navigation" aria-label="Principal">
                         <ul class="d-flex gap-4">
-                            <a href="#hero">
-                                <li>Home</li>
-                            </a>
-                            <a href="#servico">
-                                <li>Serviços</li>
-                            </a>
-                            <a href="#contatos">
-                                <li>Contato</li>
-                            </a>
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#servico">Serviços</a></li>
+                            <li><a href="#contatos">Contato</a></li>
                         </ul>
                     </nav>
 
                     <div class="nav-right">
                         <a class="social-pill discord" href="https://discord.gg/aGbEyuJwq2" target="_blank"
-                            rel="noopener" aria-label="Discord">
+                            rel="noopener noreferrer" aria-label="Discord">
                             <span class="shine"></span>
                             <svg viewBox="0 0 640 512" aria-hidden="true">
                                 <path
@@ -80,8 +86,8 @@
                             </svg>
                         </a>
 
-                        <a class="social-pill discord" href="https://wa.me/5545999997579" target="_blank" rel="noopener"
-                            aria-label="WhatsApp">
+                        <a class="social-pill discord" href="https://wa.me/5545999997579" target="_blank"
+                            rel="noopener noreferrer" aria-label="WhatsApp">
                             <span class="shine"></span>
                             <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
                                 <path
@@ -90,7 +96,7 @@
                         </a>
 
                         <a class="social-pill discord" href="https://www.instagram.com/lodservices" target="_blank"
-                            rel="noopener" aria-label="Instagram">
+                            rel="noopener noreferrer" aria-label="Instagram">
                             <span class="shine"></span>
                             <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
                                 alt="Instagram" class="insta-icon" />
@@ -121,17 +127,17 @@
                 <hr class="border-secondary my-3">
 
                 <a href="https://wa.me/5545999997579" target="_blank" class="btn btn-outline-light w-100"
-                    rel="noopener" aria-label="WhatsApp">
+                    rel="noopener noreferrer" aria-label="WhatsApp">
                     COMECE SEU PROJETO
                 </a>
 
                 <div class="d-flex gap-2 mt-2">
                     <a class="btn btn-outline-light flex-fill" href="https://discord.gg/aGbEyuJwq2" target="_blank"
-                        rel="noopener" aria-label="Discord">Discord</a>
+                        rel="noopener noreferrer" aria-label="Discord">Discord</a>
                     <a class="btn btn-outline-light flex-fill" href="https://wa.me/5545999997579" target="_blank"
-                        rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+                        rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp</a>
                     <a class="btn btn-outline-light flex-fill" href="https://www.instagram.com/lodservices"
-                        target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+                        target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
                 </div>
             </div>
         </div>
@@ -141,23 +147,23 @@
             <div class="service-buttons">
 
                 <button class="pill" data-text="Landing Pages Profissionais">
-                    <i class="fa-solid fa-bullhorn"></i>
+                    <i class="fa-solid fa-bullhorn" aria-hidden="true"></i>
                 </button>
 
                 <button class="pill" data-text="Sites Institucionais Modernos">
-                    <i class="fa-solid fa-building"></i>
+                    <i class="fa-solid fa-building" aria-hidden="true"></i>
                 </button>
 
                 <button class="pill" data-text="Lojas Virtuais de Alta Conversão">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
                 </button>
 
                 <button class="pill" data-text="Sistemas Web Inteligentes">
-                    <i class="fa-solid fa-code"></i>
+                    <i class="fa-solid fa-code" aria-hidden="true"></i>
                 </button>
 
                 <button class="pill" data-text="Portfólios Criativos">
-                    <i class="fa-solid fa-palette"></i>
+                    <i class="fa-solid fa-palette" aria-hidden="true"></i>
                 </button>
             </div>
 
@@ -167,7 +173,7 @@
                 para impulsionar o crescimento do seu negócio
             </h1>
 
-            <a href="https://wa.me/5545999997579" target="_blank" class="btn-contato">
+            <a href="https://wa.me/5545999997579" target="_blank" rel="noopener noreferrer" class="btn-contato">
                 COMECE SEU PROJETO
             </a>
         </section>
@@ -180,81 +186,85 @@
             <div class="swiper servicos-swiper">
                 <div class="swiper-wrapper">
 
-                    <!-- Landing Pages -->
+                 
                     <div class="swiper-slide">
                         <article class="srv-card">
-                            <div class="srv-ico"><i class="fa-solid fa-bullhorn"></i></div>
+                            <div class="srv-ico"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i></div>
                             <h3 class="srv-title">Landing Pages</h3>
                             <p class="srv-desc">Páginas criadas estrategicamente para capturar leads e gerar conversões.
                                 Desenvolvidas com copy persuasiva, design moderno e carregamento rápido — ideais para
                                 campanhas, lançamentos e anúncios pagos. Cada detalhe é pensado para guiar o visitante
                                 até a ação que importa: o contato ou a venda.</p>
-                            <a href="#services" class="srv-cta">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="landingpage.html" class="srv-cta">Saiba mais <i
+                                    class="fa-solid fa-arrow-right"></i></a>
                         </article>
                     </div>
 
-                    <!-- Sites Institucionais -->
                     <div class="swiper-slide">
                         <article class="srv-card">
-                            <div class="srv-ico"><i class="fa-solid fa-building"></i></div>
+                            <div class="srv-ico"><i class="fa-solid fa-building" aria-hidden="true"></i></div>
                             <h3 class="srv-title">Sites Institucionais</h3>
                             <p class="srv-desc">Um site profissional que transmite autoridade, confiança e posiciona sua
                                 marca no digital. Criamos páginas institucionais com design limpo, navegação fluida e
                                 foco em experiência do usuário — reforçando seus valores, serviços e diferenciais com
                                 alto padrão visual e técnico.</p>
-                            <a href="#services" class="srv-cta">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="sitesinstitucionais.html" class="srv-cta">Saiba mais <i
+                                    class="fa-solid fa-arrow-right"></i></a>
                         </article>
                     </div>
 
-                    <!-- Lojas Virtuais -->
+                  
                     <div class="swiper-slide">
                         <article class="srv-card">
-                            <div class="srv-ico"><i class="fa-solid fa-cart-shopping"></i></div>
+                            <div class="srv-ico"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></div>
                             <h3 class="srv-title">Lojas Virtuais</h3>
                             <p class="srv-desc">Estruturadas para vender. Desenvolvemos e-commerces completos, com
                                 carrinho otimizado, checkout seguro e integração com métodos de pagamento e frete. Além
                                 do visual atrativo, entregamos performance, responsividade e otimização SEO para atrair
                                 mais clientes e aumentar as conversões.</p>
-                            <a href="#services" class="srv-cta">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="lojasvirtuais.html" class="srv-cta">Saiba mais <i
+                                    class="fa-solid fa-arrow-right"></i></a>
                         </article>
                     </div>
 
-                    <!-- Sistemas Web -->
+                 
                     <div class="swiper-slide">
                         <article class="srv-card">
-                            <div class="srv-ico"><i class="fa-solid fa-code"></i></div>
+                            <div class="srv-ico"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
                             <h3 class="srv-title">Sistemas Web</h3>
                             <p class="srv-desc">Soluções sob medida para automatizar processos e conectar seu negócio.
                                 Sistemas personalizados com dashboards, autenticação, relatórios e banco de dados — tudo
                                 desenvolvido com foco em desempenho, segurança e escalabilidade. Integre setores e
                                 simplifique sua gestão com tecnologia web.</p>
-                            <a href="#services" class="srv-cta">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="sistemasweb.html" class="srv-cta">Saiba mais <i
+                                    class="fa-solid fa-arrow-right"></i></a>
                         </article>
                     </div>
 
-                    <!-- Portfólios -->
                     <div class="swiper-slide">
                         <article class="srv-card">
-                            <div class="srv-ico"><i class="fa-solid fa-palette"></i></div>
+                            <div class="srv-ico"><i class="fa-solid fa-palette" aria-hidden="true"></i></div>
                             <h3 class="srv-title">Portfólios</h3>
                             <p class="srv-desc">Mostre o melhor do seu trabalho com um portfólio criativo, responsivo e
                                 feito para impressionar. Ideal para profissionais e empresas que querem destacar seus
                                 projetos, depoimentos e diferenciais de forma moderna, interativa e totalmente
                                 personalizada à sua identidade visual.</p>
-                            <a href="#services" class="srv-cta">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="portfolios.html" class="srv-cta">Saiba mais <i
+                                    class="fa-solid fa-arrow-right"></i></a>
                         </article>
                     </div>
 
-                    <!-- Blogs e Notícias -->
+                  
                     <div class="swiper-slide">
                         <article class="srv-card">
-                            <div class="srv-ico"><i class="fa-solid fa-newspaper"></i></div>
+                            <div class="srv-ico"><i class="fa-solid fa-newspaper" aria-hidden="true"></i></div>
                             <h3 class="srv-title">Blogs e Notícias</h3>
                             <p class="srv-desc">Plataformas de conteúdo otimizadas para SEO, com foco em desempenho e
                                 experiência de leitura. Gerencie postagens, categorias e comentários com facilidade,
                                 fortalecendo o tráfego orgânico e a autoridade da sua marca por meio de artigos,
                                 notícias e atualizações constantes.</p>
-                            <a href="#services" class="srv-cta">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="blog.html" class="srv-cta">Saiba mais <i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></a>
                         </article>
                     </div>
 
@@ -275,7 +285,7 @@
                         empresas que desejam performance, personalização e impacto digital.
                         Nossos projetos combinam design, tecnologia e estratégia.
                     </p>
-                    <a href="https://wa.me/5545999997579" target="_blank" class="btn-contato">
+                    <a href="https://wa.me/5545999997579" target="_blank" rel="noopener noreferrer" class="btn-contato">
                         COMECE SEU PROJETO
                     </a>
 
@@ -292,7 +302,7 @@
 
                 <div class="servicos-right">
                     <div class="item-servico">
-                        <h4>Sites responsivos e de alto desempenho</h4>
+                        <h3>Sites responsivos e de alto desempenho</h3>
                         <p>
                             Perfeitos em desktops e dispositivos móveis, com carregamento
                             rápido e fluidez.
@@ -343,7 +353,7 @@
 
             <div class="swiper portfolio-swiper">
                 <div class="swiper-wrapper">
-                    <!-- SLIDE 1 -->
+                
                     <div class="swiper-slide">
                         <article class="pf-card">
                             <div class="pf-left">
@@ -353,19 +363,20 @@
                                     Desenvolvimento de site profissional para destacar os serviços de elétrica,
                                     hidráulica e manutenção do O Pereirão, com foco em conversões e atendimento rápido.
                                 </p>
-                                <a href="https://opereirao.com.br" target="_blank" class="btn-contato mt-0">
+                                <a href="https://opereirao.com.br" target="_blank" rel="noopener noreferrer"
+                                    class="btn-contato mt-0">
                                     Acessar projeto
                                 </a>
                             </div>
 
                             <div class="pf-right">
-                                <img class="pf-device" src="assets/img/pereira.png" alt="Notebook mock">
-                                <!-- badge -->
+                                <img class="pf-device" src="assets/img/pereira.png" loading="lazy" decoding="async"
+                                    alt="Notebook mock" width="1200" height="750">
+                               
                             </div>
                         </article>
                     </div>
 
-                    <!-- DUPLIQUE OS SLIDES ALTERANDO TÍTULO, DESC E IMAGENS -->
                     <div class="swiper-slide">
                         <article class="pf-card">
                             <div class="pf-left">
@@ -373,11 +384,13 @@
                                 <p class="pf-desc">Site institucional desenvolvido durante minha atuação como
                                     desenvolvedor no Foodi, plataforma de automação para restaurantes. Design moderno e
                                     foco em performance, clareza e experiência do usuário.</p>
-                                <a href="https://foodi.com.br" target="_blank" class="mt-0 btn-contato">Acessar
+                                <a href="https://foodi.com.br" target="_blank" rel="noopener noreferrer"
+                                    class="mt-0 btn-contato">Acessar
                                     projeto</a>
                             </div>
                             <div class="pf-right">
-                                <img class="pf-device" src="assets/img/foodi.png" alt="Notebook mock">
+                                <img class="pf-device" src="assets/img/foodi.png" alt="Mock do site FOODI"
+                                    loading="lazy" decoding="async" width="1200" height="750">
                             </div>
                         </article>
                     </div>
@@ -393,14 +406,15 @@
                             </div>
 
                             <div class="pf-right">
-                                <img class="pf-device" src="assets/img/lodnet.png" alt="Notebook mock">
-                                <!-- badge -->
+                                <img class="pf-device" src="assets/img/lodnet.png" loading="lazy" decoding="async"
+                                    alt="Notebook mock" width="1200" height="750">
+                            
                             </div>
                         </article>
                     </div>
                 </div>
 
-                <!-- paginação (bolinhas) -->
+            
                 <div class="swiper-pagination"></div>
             </div>
 
@@ -411,9 +425,9 @@
     <section class="contato-projeto" id="contatos">
         <div class="container">
             <div class="conteudo">
-                <h1 class="mb-5">VAMOS CONVERSAR SOBRE<br />SEU PROJETO?</h1>
+                <h2 class="mb-5">VAMOS CONVERSAR SOBRE<br />SEU PROJETO?</h2>
 
-                <a href="https://wa.me/5545999997579" target="_blank" class="btn-contato">
+                <a href="https://wa.me/5545999997579" target="_blank" rel="noopener noreferrer" class="btn-contato">
                     COMECE SEU PROJETO
                 </a>
             </div>
@@ -425,7 +439,7 @@
             <div class="footer-inner">
                 <div class="footer-top">
                     <div class="footer-brand-block">
-                        <h3 class="footer-brand-title">LodServices</h3>
+                        <h4 class="footer-brand-title">LodServices</h4>
                         <p class="footer-brand-desc">
                             Construindo o futuro, um passo de cada vez.
                         </p>
@@ -444,10 +458,10 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="assets/js/scripts.js"></script>
+    <script defer src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script defer src="libs/scrollreveal/scrollreveal.js"></script>
+    <script defer src="libs/swiper/swiper-bundle.min.js"></script>
+    <script defer src="assets/js/scripts.js"></script>
 </body>
 
 </html>
